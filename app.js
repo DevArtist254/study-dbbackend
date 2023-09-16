@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 });
 
 app.use((req, res, next) => {
-  req.requstTime = new Date().toDateString();
+  req.requestTime = new Date().toDateString();
   next();
 });
 
