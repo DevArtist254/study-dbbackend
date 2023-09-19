@@ -11,7 +11,9 @@ class APIFeatures {
     excludedFields.forEach((el) => delete queryObj[el]);
 
     let queryStr = JSON.stringify(queryObj);
-    querystr = queryObj.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
+    queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => {
+      return `$${match}`;
+    });
 
     this.query = this.query.find(JSON.parse(queryStr));
 
@@ -46,7 +48,6 @@ class APIFeatures {
     const skip = (page - 1) * limit;
 
     this.query = this.query.skip(skip).limit(limit);
-
     return this;
   }
 }
