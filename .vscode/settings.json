@@ -1,5 +1,10 @@
 {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.tabWidth": 1,
-    "prettier.useTabs": true
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.tabWidth": 1,
+	"prettier.useTabs": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
